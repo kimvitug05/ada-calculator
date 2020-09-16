@@ -1,6 +1,7 @@
 require './methods'
+require "colorize"
 
-puts "Welcome to the Calculator program!"
+puts "Welcome to the Calculator program!".colorize(:blue)
 operator = ""
 
 until operator == "q" || operator == "exit"

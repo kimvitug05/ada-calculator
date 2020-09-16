@@ -1,4 +1,5 @@
 include Math
+require "colorize"
 
 OPERATORS = %w[add + subtract - multiply * divide / exponent ^ modulo % exit q]
 WORD_TO_SYMBOL_MAP =  {
@@ -67,13 +68,13 @@ end
 
 def get_valid_operator(message)
   puts message
-  puts "  add(+)"
-  puts "  subtract(-)"
-  puts "  multiply(*)"
-  puts "  divide(/)"
-  puts "  exponent(^)"
-  puts "  modulo(%)"
-  puts "  exit(q)"
+  puts "  add(+)".colorize(:green)
+  puts "  subtract(-)".colorize(:green)
+  puts "  multiply(*)".colorize(:green)
+  puts "  divide(/)".colorize(:green)
+  puts "  exponent(^)".colorize(:green)
+  puts "  modulo(%)".colorize(:green)
+  puts "  exit(q)".colorize(:green)
 
   print "Please enter an operator (name or symbol): "
   operator = gets.chomp.downcase
